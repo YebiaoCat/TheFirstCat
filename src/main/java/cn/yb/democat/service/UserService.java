@@ -15,4 +15,8 @@ public class UserService {
     public List<UserEntity> getAllUser(String username){
         return um.AllUser(username);
     }
+
+    public List<UserEntity> GetUserByUsernameAndPassword(String username,String password){
+        return um.GetUserByUsernameAndPassword(username,password);
+    }
 }

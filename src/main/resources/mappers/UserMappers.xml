@@ -18,4 +18,12 @@
              from user where username = #{username}
     </select>
 
+    <select id="GetUserByUsernameAndPassword" resultType="cn.yb.democat.entity.UserEntity">
+        select id,username,password,netname,userage,
+               (CASE WHEN usersex = 1 THEN '男'
+                     WHEN usersex = 2 THEN '女'
+                     ELSE '未知' END) AS usersex,
+               userdescribe
+                from user where username = #{username} and password = #{password}
+    </select>
 </mapper>
