@@ -51,4 +51,21 @@ public class UserController {
         }
         return Result.suc(list);
     }
+
+    //修改用户密码
+    @RequestMapping("/changePassword")
+    @ResponseBody
+    public Result changePassword(String username,String password,String newPassword){
+        if(username ==null | password == null | newPassword == null){
+            log.error("----------------参数为空----------------");
+            return Result.fail(ResultCode.PARAM_IS_NULL);
+        }
+        List<UserEntity> list = us.GetUserByUsernameAndPassword(username,password);
+        if(list.size()==0){
+            log.error("--------------账号或者密码错误---------------------");
+            return Result.fail(ResultCode.USER_NOT_FIND);
+        }
+        us.UpdateUserPassword(list.get(0).getId(),newPassword);
+        return Result.suc();
+    }
 }

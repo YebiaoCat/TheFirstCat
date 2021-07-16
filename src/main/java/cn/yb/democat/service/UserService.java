@@ -19,4 +19,8 @@ public class UserService {
     public List<UserEntity> GetUserByUsernameAndPassword(String username,String password){
         return um.GetUserByUsernameAndPassword(username,password);
     }
+
+    public void UpdateUserPassword(int id,String newPassword){
+        um.UpdateUserPassword(id,newPassword);
+    }
 }

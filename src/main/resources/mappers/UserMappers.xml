@@ -26,4 +26,8 @@
                userdescribe
                 from user where username = #{username} and password = #{password}
     </select>
+
+    <update id="UpdateUserPassword" parameterType="cn.yb.democat.entity.UserEntity">
+        update user set password = #{newPassword} WHERE id = #{id}
+    </update>
 </mapper>

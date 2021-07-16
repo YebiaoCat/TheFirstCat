@@ -10,5 +10,8 @@ import java.util.List;
 public interface UserMapper {
 
     List<UserEntity> AllUser(@Param("username") String username);
+
     List<UserEntity> GetUserByUsernameAndPassword(@Param("username")String username,@Param("password") String password);
+
+    void UpdateUserPassword(@Param("id")int id,@Param("newPassword")String newPassword);
 }
