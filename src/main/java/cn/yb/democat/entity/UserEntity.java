@@ -11,4 +11,6 @@ public class UserEntity {
     private Integer userAge;
     private String userSex;
     private String userDescribe;
+    private String userPhone;
+    private String emailAddress;
 }

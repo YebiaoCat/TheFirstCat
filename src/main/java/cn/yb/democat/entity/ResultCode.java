@@ -16,7 +16,8 @@ public enum ResultCode  {
     PARAM_IS_NULL(10002, "参数为空"),
     /* 用户错误：20001-29999*/
     USER_HAS_EXISTED(20001, "用户名已存在"),
-    USER_NOT_FIND(20002, "用户名不存在");
+    USER_NOT_FIND(20002, "用户名不存在"),
+    USER_PASSWORD_ERROR(20003,"密码错误");
 
     private Integer code;
 

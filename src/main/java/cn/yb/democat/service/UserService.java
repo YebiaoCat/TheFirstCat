@@ -23,4 +23,12 @@ public class UserService {
     public void UpdateUserPassword(int id,String newPassword){
         um.UpdateUserPassword(id,newPassword);
     }
+
+    public void InsertNewUser(UserEntity ue){
+        um.InsertNewUser(ue);
+    }
+
+    public List<UserEntity> GetUserById(int id){
+        return um.GetUserById(id);
+    }
 }
